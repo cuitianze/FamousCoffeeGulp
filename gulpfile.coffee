@@ -26,6 +26,7 @@ util         = require 'gulp-util'
 config =
   src   : 'src'            # main path for all source files
   dest  : 'www'            # output path for all deployable files
+  dist  : 'dist'           # output path for distribution builds
   debug : true             # include source maps
   port  : 9000             # dev server port
   reload: true             # enable livereload
@@ -93,17 +94,21 @@ gulp.task 'styles', ->
 
 
 # main tasks
-gulp.task 'main', ['clean'], -> gulp.start 'build'
+gulp.task 'dist', ->
+  config.debug = false
+  config.env = 'production'
+  config.dest = config.dist
+  gulp.task 'distbuild', ['clean'], ->
+    gulp.start 'build'
+  gulp.start 'distbuild'
+
+gulp.task 'dev', ['clean'], -> gulp.start 'build'
 
 gulp.task 'clean', ->
   gulp.src config.dest, read: false
     .pipe clean(force: true)
 
 gulp.task 'build', ['html', 'scripts', 'styles']
-
-gulp.task 'dist', ['clean'], ->
-  config.debug = false
-  gulp.start 'build'
 
 
 # development server
@@ -139,7 +144,7 @@ gulp.task 'watch', ['connect'], ->
       gulp.start 'reload'
 
 
-gulp.task 'connect', ['main'], ->
+gulp.task 'connect', ['dev'], ->
   connect.server
     root: config.dest
     port: config.port

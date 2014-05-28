@@ -11,5 +11,8 @@ The build process is done with [Gulp](http://gulpjs.com/) and has a nice liverel
 0. Install the Bower dependencies: ```bower install```
 0. Start the Karma test runner ```npm test``` or directly with ```karma start test/karma.config.coffee``` (you need to have the Karma-cli installed globally first with ```npm install -g karma-cli```)
 0. Start the dev server in a new terminal window ```npm start``` or just ```gulp```
+0. Build the minified distribution version for deployment with ```gulp dist```
 
 
+### Credits
+Thanks to [PEM](https://github.com/PEM--/hellofamousgulped) for his example which this template was originally based on.
