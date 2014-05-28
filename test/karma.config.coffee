@@ -21,6 +21,7 @@ module.exports = (config) ->
       watch: true # Watches dependencies only (Karma watches the tests)
       debug: true # Adds source maps to bundle
       files: [
+        'src/bower_components/famous-polyfills/index.js'
         'src/scripts/**/*.coffee'
         'test/spec/**/*_spec.+(coffee|js)'
       ]
