@@ -1,0 +1,10 @@
+$page-color: #ecf0f4;
+$test-color: #b88788;
+
+.my_view {
+  background-color: $test-color;
+  border: 2px solid darken($test-color, 15);
+  color: #FFF;
+  line-height: 50px;
+  text-align: center;
+}

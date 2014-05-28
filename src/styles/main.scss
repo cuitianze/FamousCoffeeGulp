@@ -1,0 +1,27 @@
+@import 'includes/_famous';
+@import 'includes/_common';
+
+
+html {
+  background: $page-color;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+}
+
+
+.body {
+  padding: 10px;
+  text-align: left;
+  color: white;
+  font-size: inherit;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+.backfaceVisibility {
+  -webkit-backface-visibility: visible;
+  backface-visibility: visible;
+}

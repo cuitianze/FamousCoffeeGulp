@@ -1,0 +1,21 @@
+{
+  "name": "FamousCoffeeGulp",
+  "description": "Famo.us framework project template that uses Coffeescript, Sass, Karma, Mocha, Chai with Browserify and Gulp",
+  "version": "0.0.1",
+  "homepage": "https://github.com/subblue/FamousCoffeeGulp",
+  "authors": [
+    "tom@subblue.com"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "src/bower_components",
+    "test"
+  ],
+  "dependencies": {
+    "famous-polyfills": "git@github.com:Famous/polyfills.git#0.1.1",
+    "famous": "git@github.com:Famous/famous.git#v0.2.0"
+  }
+}
