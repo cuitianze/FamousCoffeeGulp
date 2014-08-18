@@ -2,7 +2,7 @@
   "name": "FamousCoffeeGulp",
   "description": "Famo.us framework project template that uses Coffeescript, Sass, Karma, Mocha, Chai with Browserify and Gulp",
   "version": "0.0.1",
-  "homepage": "https://github.com/subblue/FamousCoffeeGulp",
+  "homepage": "https://github.com/cuitianze/FamousCoffeeGulp",
   "authors": [
     "cuitianze123@gmail.com"
   ],
